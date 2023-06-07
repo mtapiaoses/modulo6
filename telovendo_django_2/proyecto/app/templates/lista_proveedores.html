@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block contenido %}
+
+<div class="card bg-white">
+<div class="card-header"><h2><i class="fa-solid fa-square-poll-horizontal"></i> Lista Proveedores</h2></div>
+<div class="card-body">
+<table class="table">
+<thead>
+
+    <tr>
+        <th>Nombre</th>
+        <th>Rut</th>
+         <th>Email</th> 
+       
+         <th>Telefono</th>
+           <th>Razon Social</th>
+        </tr>
+</thead>
+
+
+
+<tbody>
+
+{% for proveedor in proveedores%}
+<tr>
+    <td>{{proveedor.nombre}}</td> 
+    <td>{{proveedor.rut}}</td> 
+    <td>{{proveedor.email}}</td>
+    
+    <td>{{proveedor.telefono}}</td>
+        <td>{{proveedor.razon_social}}</td>
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+</div>
+</div>
+
+
+
+
+{% endblock %}

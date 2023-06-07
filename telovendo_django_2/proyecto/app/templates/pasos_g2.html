@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% block contenido %}
+<div class="card bg-white">
+<div class="card-header"><h3>Como mostrar un template
+con django.</h3></div>
+<div class="card-body">
+  <table class="table">
+  <tbody>
+    <tr>
+      <td>
+        <strong>Crear el archivo de la plantilla html: </strong> En la carpeta de tu proyecto
+         Django, crea una nueva carpeta llamada "templates" si aún no existe.
+      Dentro de la carpeta "templates", crea un archivo HTML para tu plantilla. 
+      Por ejemplo, podrías llamarlo "mi_template.html".
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+      
+      <strong> Configurar la ruta URL</strong>
+      Abre el archivo "urls.py" de tu aplicación Django (generalmente ubicado en la carpeta del proyecto o en la carpeta de la aplicación).
+      Importa la función "TemplateView" de Django: from django.views.generic import TemplateView.
+      </td>
+    </tr>
+    <tr>
+      <td>
+          
+      <strong>Renderizar la plantilla</strong>   
+      Abre el archivo de vista asociado a la URL que configuraste en el paso anterior.
+      Importa la función render de Django: from django.shortcuts import render.
+      Define una función de vista que maneje la solicitud de esa URL
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        
+        <strong>Mostrar la plantilla en el navegador</strong>    
+        Ejecuta tu servidor Django localmente (por ejemplo, mediante el comando python manage.py runserver).
+        Abre tu navegador web y ve a la URL correspondiente a tu plantilla (por ejemplo, http://localhost:8000/mi_ruta/).</p>
+      </td>
+    </tr>
+ 
+  </tbody>
+</table>
+</div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends 'base.html' %} {% block contenido %}
+<div class="card bg-white">
+  <div class="card-header">
+    <h3>
+      Pasos necesarios para levantar un formulario desde Django
+con Forms y Models.
+    </h3>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>
+            <strong>Configuración inicial: </strong> Asegúrate de tener Django
+            instalado en tu entorno de desarrollo y crea un proyecto Django
+            utilizando el comando django-admin startproject nombre_proyecto.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <strong>Creación de una aplicación:</strong>Crea una nueva
+            aplicación dentro del proyecto ejecutando python manage.py startapp
+            nombre_app. Luego, agrega la aplicación al archivo settings.py del
+            proyecto Django en la lista INSTALLED_APPS.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <strong>Define el modelo:</strong> En el archivo models.py de tu
+            aplicación, define tu modelo utilizando la clase models.Model.
+            Agrega los campos del modelo que deseas incluir en tu formulario.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <strong> Migraciones:</strong> Crea las migraciones ejecutando
+            python manage.py makemigrations y aplica las migraciones ejecutando
+            python manage.py migrate. Esto creará las tablas correspondientes en
+            la base de datos. Django.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong> Formulario: </strong> Crea un archivo forms.py en tu
+            aplicación y define una clase para tu formulario. Utiliza los campos
+            del formulario (CharField, EmailField, etc.) para definir los campos
+            que deseas mostrar.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Vistas</strong>En el archivo views.py de tu aplicación,
+            importa la clase FormView de Django y define una vista basada en
+            clase que herede de FormView. Asocia la vista a una URL específica.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Template:</strong>Crea un archivo HTML en la carpeta
+            templates de tu aplicación. Utiliza la etiqueta form de Django en el
+            archivo HTML para mostrar el formulario. Accede a los campos del
+            formulario utilizando la sintaxis {{ form.nombre_campo }}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>URL:</strong>En el archivo urls.py de tu proyecto, configura
+            una URL que apunte a la vista del formulario.
+          </td>
+        </tr>
+          <tr>
+          <td>
+            <strong> Ejecutar:</strong>Ejecuta el servidor de desarrollo de Django
+             utilizando el comando python manage.py runserver y accede a la URL del
+              formulario en tu navegador para verificar su funcionamiento.
+          </td
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}

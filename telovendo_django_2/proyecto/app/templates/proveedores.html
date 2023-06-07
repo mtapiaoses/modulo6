@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+  {% load static %}
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@200&display=swap');
+    * {
+      font-family: 'Geologica', sans-serif;
+    }
+
+    body {
+      background-size: 100% 100%;
+    
+    }
+
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="password"],
+    .form-container input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .form-container button {
+      background-color: #4caf50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    #contenedor_img {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+     
+    }
+
+     .main{
+      background-image: url("{% static 'xl.jpg' %}");
+     }
+  </style>
+
+  <form method="POST" class="form-container">
+    <h2>Registro de Proveedores</h2>
+    <div id="contenedor_img">
+      <img src="{% static 'logo.png' %}" alt="" width="60px">
+    </div>
+
+    {% csrf_token %}
+    <label>Nombre</label><br />
+    {{ formulario.nombre}}<br />
+    <label>Rut</label><br />
+    {{ formulario.rut}}<br />
+
+    <label>Email</label><br/>
+    {{ formulario.email}}<br />
+
+    <label>Razon social</label><br />
+    {{ formulario.razon_social}}<br />
+
+     <label>Telefono</label><br />
+    {{ formulario.telefono}}<br />
+
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

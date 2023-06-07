@@ -1,0 +1,64 @@
+{% extends 'base.html' %} {% block contenido %}
+<div class="card bg-white">
+<div class="card-header"><h3>Guía para que cualquier persona pueda mostrar contenido dinámico desde un
+archivo sqlite3</h3></div>
+<div class="card-body">
+  <table class="table">
+  <tbody>
+    <tr>
+      <td>
+        <strong>Configuración de Django: </strong> Asegúrate de tener Django instalado en tu
+        entorno de desarrollo. Crea un nuevo proyecto de Django utilizando el
+        comando django-admin startproject nombre_proyecto. Navega al directorio
+        del proyecto utilizando cd nombre_proyecto. Crea una nueva aplicación
+        dentro del proyecto utilizando python manage.py startapp nombre_app.
+        Actualiza la configuración del proyecto en el archivo settings.py para
+        incluir la aplicación recién creada.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <strong>Migraciones y creación de la base de datos:</strong> Ejecuta el comando python
+        manage.py makemigrations para crear las migraciones basadas en el modelo
+        definido. Aplica las migraciones con el comando python manage.py migrate
+        para crear la estructura de la base de datos.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Creación de la plantilla:</strong> Crea una plantilla HTML en la carpeta de la
+        aplicación dentro de la carpeta templates. Utiliza el lenguaje de
+        plantillas de Django para iterar sobre los datos y mostrarlos en la
+        plantilla. Puedes utilizar las etiquetas de Django, como ', para generar
+        contenido dinámico en la plantilla.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <strong>Configuración de URL:</strong> Abre el archivo urls.py de la aplicación y define
+        una URL que mapee a la función de vista creada anteriormente. Asocia la
+        URL a la función de vista utilizando la función path o re_path de
+        Django.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Levantamiento del servidor: </strong> Ejecuta el comando python manage.py
+        runserver para iniciar el servidor de desarrollo de Django. Abre tu
+        navegador web y accede a la URL proporcionada para ver la aplicación web
+        con el contenido dinámico. Siguiendo estos pasos, podrás mostrar
+        contenido dinámico desde un archivo SQLite3 en tu aplicación web
+        utilizando Django. Asegúrate de ajustar los nombres de los modelos,
+        vistas, archivos y rutas según tu proyecto específico.
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+
+{% endblock %}
