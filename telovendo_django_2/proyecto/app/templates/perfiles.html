@@ -1,4 +1,6 @@
 {% extends 'base.html' %} {% block contenido %}
+<div class="row justify-content-center">
+  <div class="col-sm-8">
 <div class="card bg-white border-0 shadow-sm">
 <div class="card-header"><h2> <i class="fa-solid fa-users"></i> Usuario del sistema</h2></div>
 <div class="card-body">
@@ -10,24 +12,22 @@
       <th>Apellido</th>
       <th>Telefono</th>
       <th>Ciudad</th>
-      <th>Direccion</th>
-      <th>Edad</th>
+ 
     </tr>
   </thead>
 
   <tbody>
     {% for perfil in perfiles%}
     <tr>
-      <td> <button class="btn" id="boton"><strong>
-        <a href="/perfil_usuario/{{perfil.user.id}}">
-          {{perfil.user.first_name}}</strong></a
-        ></button>
+      <td> 
+ 
+          {{perfil.user.first_name}}
+
       </td>
       <td>{{perfil.user.last_name}}</td>
       <td>{{perfil.telefono}}</td>
       <td>{{perfil.ciudad}}</td>
-      <td>{{perfil.direccion}}</td>
-      <td>{{perfil.edad}}</td>
+  
     </tr>
     {% endfor %}
   </tbody>
@@ -35,5 +35,8 @@
 
 <br />
 </div>
+</div>
+
+  </div>
 </div>
 {% endblock %}

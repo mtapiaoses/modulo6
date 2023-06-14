@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block contenido %}
+
+<div class="card m-5">
+  <div class="card-header">Autentificacion</div>
+  <div class="card-body text-center">
+    <h1>ATENTIFICACIÓN EXITOSA</h1>
+    <br />
+    <h2>Bienvenido {{user.first_name}} {{user.last_name}}</h2>
+    <div class="row justify-content-center">
+        <div class="col-sm-3">
+ <table class="table">
+        <tbody>
+          <tr>
+            <td>Telefono</td>
+            <td>{{perfil.telefono}}</td>
+          </tr>
+          <tr>
+            <td>Dirección</td>
+            <td>{{perfil.direccion}}</td>
+          </tr>
+          <tr>
+            <td>Ciudad</td>
+            <td>{{perfil.ciudad}}</td>
+          </tr>
+          <tr>
+            <td>Edad</td>
+            <td>{{perfil.edad}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+        </div>
+     
+    </div>
+  </div>
+</div>
+
+{% endblock %}

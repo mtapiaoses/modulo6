@@ -17,7 +17,8 @@
       max-width: 400px;
       margin: 0 auto;
       padding: 20px;
-    background-color: rgba(255,255,255,0.4);
+      background-color: rgba(255,255,255,0.4);
+     
       border-radius: 5px;
     }
 
@@ -36,7 +37,7 @@
     }
 
     .form-container button {
-      background-color: #5f9977;
+      background-color: #4caf50;
       color: white;
       padding: 14px 20px;
       margin: 8px 0;
@@ -53,31 +54,20 @@
      
     }
 
-     .main{
-      ;
-     }
+   
   </style>
 
   <form method="POST" class="form-container">
-    <h2>Registro de Proveedores</h2>
+    <h2>Login Usuarios</h2>
     <div id="contenedor_img">
       <img src="{% static 'logo.png' %}" alt="" width="60px">
     </div>
 
     {% csrf_token %}
-    <label>Nombre</label><br />
-    {{ formulario.nombre}}<br />
-    <label>Rut</label><br />
-    {{ formulario.rut}}<br />
-
-    <label>Email</label><br/>
-    {{ formulario.email}}<br />
-
-    <label>Razon social</label><br />
-    {{ formulario.razon_social}}<br />
-
-     <label>Telefono</label><br />
-    {{ formulario.telefono}}<br />
+    <label>Username</label><br />
+    {{ formulario_login.usuario}}<br />
+    <label>Password</label><br />
+    {{ formulario_login.password}}<br />
 
     <button type="submit">Submit</button>
   </form>

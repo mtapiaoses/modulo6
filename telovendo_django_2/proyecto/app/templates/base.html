@@ -16,7 +16,8 @@
         *{margin:0;padding: 0;
        }
       body {
-        padding-bottom: 70px; /* Ajusta el valor para dejar espacio para el footer */
+        padding-bottom: 70px; 
+          background-image: url("{% static 'fondo_telovendo.png' %}");/* Ajusta el valor para dejar espacio para el footer */
       }
       .header {
         background-color: white;
@@ -24,7 +25,9 @@
          filter: blur(5px);
       }
       .main{ 
-    background-size: 100% 100%;}
+    background-size: 100% 100%;
+  min-height: 650px;
+  }
       .footer {
          background-color: rgb(7,153,182);
         padding: 10px;
@@ -37,7 +40,7 @@
         background-color: rgb(7,153,182);
       }
       #boton{
-          background-color: rgb(7,153,182);
+          
       }
       #boton a{
         color:white;
@@ -49,6 +52,10 @@
            background-color: rgb(7,153,182);
          color: white;
          text-shadow: 2px 2px 5px black;      }
+
+         .card-body{background-color: rgba(255,255,255,0.4);}
+ /* Cambia el color de los enlaces visitados */
+
     </style>
   </head>
   <body>
@@ -57,7 +64,7 @@
     </div>
     <nav class="nav navbar navbar-expand-sm  navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="text-shadow: 1px 1px 5px black;"> <i class="fa-sharp fa-solid fa-square-poll-vertical"></i> TeLoVendo.com</a>
+        <a class="navbar-brand" href="/" style="text-shadow: 1px 1px 5px black;"> <img src="{% static 'logo.png' %}" alt="" width="32px"> TeLoVendo.com</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -99,14 +106,39 @@ archivo sqlite3
                 <li>
                   <a class="dropdown-item" href="/pasos_formulario"
                     >Pasos necesarios para levantar un formulario desde Django
-con Forms y Models.
+con Forms y Models &nbsp &nbsp &nbsp
                   </a>
                 </li>
+               
               </ul>
             </li>
+             <li class="nav-item">
+    <a class="nav-link"  href="/login/">Login</a>  
+                
+                 
+                </li>
+<li class="nav-item">
+
+               
+                  
+                </li>
+                 <li class="nav-item">
+          
+            <a class="nav-link" href="/logout/">Cerrar Sesion</a>
+                </li>
+
+                <li>  <a class="nav-link" id="vinculo"> [{{user.first_name}} {{user.last_name}}]</a></li>
           </ul>
+
+          <div class="nav-bar" style="padding-left:20%;display:flex;"> 
+          
+              
+         
+                
+         </div>
         </div>
       </div>
+      
     </nav>
 
     <div class="main container-fluid p-3">{% block contenido %} {% endblock %}</div>

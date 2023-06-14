@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block contenido %}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap');
+        #titulo_inicio{ color: white;
+            font-size: 55px;
+        text-shadow: 2px 2px 12px black;}
+
+         #parrafo_inicio{ color: white;
+        font-size: 30px;
+        text-shadow: 2px 2px 12px black;
+        font-family: 'Montserrat', sans-serif;}
+</style>
+<div class="row justify-content-center  p-5">
+
+ <div class="col-sm-9 text-center ">
+  
+ </div>
+    <div class="col-sm-4  text-left " >
+   <h1 id="titulo_inicio">TeLoVendo.com</h1>
+       
+        <p id="parrafo_inicio">"Encuentra la esencia de la diversión en la nieve, equipado con nuestros artículos de primera calidad."</p>
+        {% load static %}
+      
+    </div>
+     <div class="col-sm-4 text-center" >
+          <img src="{%static 'logo.png' %}" alt="" width="400">
+     </div>
+</div>
+
+{% endblock %}
